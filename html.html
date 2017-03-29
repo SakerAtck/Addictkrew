@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+
+<script>
+ var images = new Array(7);  
+    images[0] = "/Imagenes/Saker/1.jpg";
+    images[1] = "/Imagenes/Saker/2.jpg";
+    images[2] = "/Imagenes/Saker/3.jpg";
+    images[3] = "/Imagenes/Saker/4.jpg";
+    images[4] = "/Imagenes/Saker/5.jpg";
+    images[5] = "/Imagenes/Saker/6.jpg";
+    images[6] = "/Imagenes/Saker/7.jpg";
+    images[7] = "/Imagenes/Saker/8.jpg";
+
+    var numimg = 7;
+    var curimg = 1;
+
+  function  goback() {
+    var im=document.getElementById("images");
+    if(curimg>0)
+   {
+    im.src = images[curimg-1];
+    curimg = curimg - 1;
+   }else{
+    alert("This is the first image");
+   }
+
+
+}
+
+function gofwd(){
+var im=document.getElementById("images");
+    if(curimg < numimg){
+    im.src = images[curimg+1];
+    curimg = curimg + 1;
+   }else{
+      alert("This is the last image");
+      }
+
+
+}
+
+    </script>
+
+
+
+</head>
+<body>
+
+<body>
+
+<div style="border: solid 12px blue; width: 500px; height: 500px;">
+<img src="/Imagenes/Saker/1.jpg" alt="lab1" height="500" width="500">
+</div><br>
+<input type="button" value="PREVIOUS" id="prev" name="prev" style="color:blue" onclick="goback();" >
+
+<input type="button" value="NEXT" id="next" name="next" style="color:blue" onclick="gofwd();" >
+
+
+
+
+
+</body>
+
+
+
+
+
+</body>
+</html>
